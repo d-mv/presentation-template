@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>React Hooks</title>
+  <link rel="stylesheet" href="dist/reset.css" />
+  <link rel="stylesheet" href="dist/reveal.css" />
+  <link rel="stylesheet" href="dist/theme/dracula.css" />
+  <link rel="stylesheet" href="presentation/custom.css" />
+  <link rel="stylesheet" href="plugin/highlight/atom.css" />
+  <style>
+    /* jetbrains-mono-300 - latin */
+    @font-face {
+      font-family: 'JetBrains Mono';
+      font-style: normal;
+      font-weight: 300;
+      src: local(''), url('plugin/fonts/jetbrains-mono-v13-latin-300.woff2') format('woff2'),
+        /* Chrome 26+, Opera 23+, Firefox 39+ */
+        url('plugin/fonts/jetbrains-mono-v13-latin-300.woff') format('woff');
+      /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    }
+
+    /* jetbrains-mono-200 - latin */
+    @font-face {
+      font-family: 'JetBrains Mono';
+      font-style: normal;
+      font-weight: 200;
+      src: local(''), url('plugin/fonts/jetbrains-mono-v13-latin-200.woff2') format('woff2'),
+        /* Chrome 26+, Opera 23+, Firefox 39+ */
+        url('plugin/fonts/jetbrains-mono-v13-latin-200.woff') format('woff');
+      /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    }
+
+    /* jetbrains-mono-regular - latin */
+    @font-face {
+      font-family: 'JetBrains Mono';
+      font-style: normal;
+      font-weight: 400;
+      src: local(''), url('plugin/fonts/jetbrains-mono-v13-latin-regular.woff2') format('woff2'),
+        /* Chrome 26+, Opera 23+, Firefox 39+ */
+        url('plugin/fonts/jetbrains-mono-v13-latin-regular.woff') format('woff');
+      /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    }
+
+    /* open-sans-300 - latin */
+    @font-face {
+      font-family: 'Open Sans';
+      font-style: normal;
+      font-weight: 300;
+      src: local(''), url('plugin/fonts/open-sans-v34-latin-300.woff2') format('woff2'),
+        /* Chrome 26+, Opera 23+, Firefox 39+ */
+        url('plugin/fonts/open-sans-v34-latin-300.woff') format('woff');
+      /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    }
+
+    /* open-sans-regular - latin */
+    @font-face {
+      font-family: 'Open Sans';
+      font-style: normal;
+      font-weight: 400;
+      src: local(''), url('plugin/fonts/open-sans-v34-latin-regular.woff2') format('woff2'),
+        /* Chrome 26+, Opera 23+, Firefox 39+ */
+        url('plugin/fonts/open-sans-v34-latin-regular.woff') format('woff');
+      /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    }
+
+    /* open-sans-700 - latin */
+    @font-face {
+      font-family: 'Open Sans';
+      font-style: normal;
+      font-weight: 700;
+      src: local(''), url('plugin/fonts/open-sans-v34-latin-700.woff2') format('woff2'),
+        /* Chrome 26+, Opera 23+, Firefox 39+ */
+        url('plugin/fonts/open-sans-v34-latin-700.woff') format('woff');
+      /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    }
+  </style>
+  <script>
+    function processKeyDown(e) {
+      if (e.key === '1') {
+        const talkElement = document.getElementById('talk')
+        const conversationElement = document.getElementById('conversation')
+
+        if (!talkElement || !conversationElement) return;
+
+        talkElement.style = "text-decoration: line-through;"
+        setTimeout(() => {conversationElement.style = "display:flex;"}, 700)
+      }
+    }
+
+    document.addEventListener('keydown', processKeyDown)
+  </script>
+</head>
+
+<body>
+  <div class="reveal">
+    <div class="slides">
+      <section>
+        <div class="title">
+          <div class='title-header'>
+            <h2>Title</h2>
+          </div>
+          <p>tagline</p>
+          <div class="details">
+            <p class="date">January 3, 2022</p>
+            <p class="author">by Dmitry Melnikov</p>
+          </div>
+            <div class='one-two'>
+              <a target="_blank"
+                href="http://localhost:8000?print-pdf">print
+                version</a>
+            </div>
+        </div>
+        <aside class="notes">Welcome and intro speak</aside>
+      </section>
+    </div>
+  </div>
+
+  <script src="dist/reveal.js"></script>
+  <script src="plugin/notes/notes.js"></script>
+  <script src="plugin/markdown/markdown.js"></script>
+  <script src="plugin/highlight/highlight.js"></script>
+  <script>
+    // More info about initialization & config:
+    // - https://revealjs.com/initialization/
+    // - https://revealjs.com/config/
+    Reveal.initialize({
+      hash: true,
+      // Learn about plugins: https://revealjs.com/plugins/
+      plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
+    });
+  </script>
+</body>
+
+</html>
